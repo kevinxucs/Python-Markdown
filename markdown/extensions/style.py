@@ -16,4 +16,7 @@ class MarkupdownExtension(markdown.Extension):
 	""" Styling Extension for Python-Markdown. """
 
 	def extendMarkdown(self, md, md_globals):
-		
+		""" Convert styling parts to html. """
+		md.registerExtension(self);
+
+		self.md = md;
